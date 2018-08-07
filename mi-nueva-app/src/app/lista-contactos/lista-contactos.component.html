@@ -1,6 +1,6 @@
 <ul>
   <li *ngFor="let contacto of contactos">
-      {{ contacto }}
+      {{ contacto.nombre }} {{ contacto.apellidos }}
       <button (click)="notificarEliminacionContacto(contacto)">ELIMINAR</button>
   </li>
 </ul>

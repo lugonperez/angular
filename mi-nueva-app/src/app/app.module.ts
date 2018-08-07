@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ContactosService } from './contactos.service';
 import { AppComponent } from './app.component';
 import { ListaContactosComponent } from './lista-contactos/lista-contactos.component';
 
@@ -12,7 +13,7 @@ import { ListaContactosComponent } from './lista-contactos/lista-contactos.compo
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ContactosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

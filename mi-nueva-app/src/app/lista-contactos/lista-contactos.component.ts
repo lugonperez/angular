@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Contacto } from '../contacto';
 
 @Component({
   selector: 'app-lista-contactos',
@@ -7,13 +8,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ListaContactosComponent {
 
-  @Output() botonEliminarPulsado = new EventEmitter<string>();
+  @Output() botonEliminarPulsado = new EventEmitter<Contacto>();
 
   // Con el decorador '@Input' exponemos un atributo
   // para que un componente pader pueda enlazar datos al hijo.
-  @Input() contactos: string[];
+  @Input() contactos: Contacto[];
 
-   notificarEliminacionContacto(contacto: string): void {
+   notificarEliminacionContacto(contacto: Contacto): void {
     this.botonEliminarPulsado.emit(contacto);
   }
 }
